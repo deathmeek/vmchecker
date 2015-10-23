@@ -93,12 +93,11 @@ Assignment test archives must be placed in tests/``assignment-id``.zip
 Resubmit an assignment
 ======================
 
-In order to resubmit a student upload for rechecking you must:
+You can resubmit an already uploaded assignment to be retested using:
 
-- delete the results folder from the current upload, e.g. ``rm -rf vmchecker-storer/repo/assign1/student.name/current/results``
-- run ``vmchecker-resubmit -c <course-id> -u <student-name> -a <assignment-name>``
+``vmchecker-resubmit -c <course-id> -u <student-name> -a <assignment-name>``
 
-``vmchecker-resubmit`` also has an ``--all`` option if you want to mass resubmit.
+Please note that the results folder at ``<storer path>/repo/<assignment-name>/<student-name>/current/results`` including any ``grade.vmr`` file will be overwritten. If you need to mass resubmit assignments you can use the ``--all`` option.
 
 Add a new instance
 ==================
